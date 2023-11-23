@@ -8,9 +8,8 @@ for(let i=0; i<5; i++){
 			rej(`Promise ${i+1} rejected with error`)
 	});
 }
-
-Promise.all(promises).then((values)=>{
-	const output = document.getElementById("output");
+const output = document.getElementById("output");
+Promise.all(promises).then((values)=>{	
 	for(let i=0; i<values.length; i++){
 		const p = document.createElement("p");
 		p.innerText = values[i];
