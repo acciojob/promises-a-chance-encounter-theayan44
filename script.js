@@ -16,4 +16,8 @@ Promise.all(promises).then((values)=>{
 		p.innerText = values[i];
 		output.appendChild(p);
 	}
+}).catch((err)=>{
+	const p = document.createElement("p");
+	p.innerText = err;
+	output.appendChild(p);
 })
