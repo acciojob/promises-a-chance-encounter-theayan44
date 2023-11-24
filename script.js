@@ -2,9 +2,7 @@
 const promises = [];
 for(let i=0; i<5; i++){
 	promises[i] = new Promise((res, rej)=>{
-		if(i % 2 == 0)
 			res(i+1);
-		else
 			rej(`Promise ${i+1} rejected with error`)
 	});
 }
